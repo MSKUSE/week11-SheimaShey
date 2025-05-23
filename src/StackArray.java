@@ -11,6 +11,9 @@ public class StackArray implements Stack{
     }
     @Override
     public Object pop() {
+        if(this.isEmpty()){
+            throw  new MyEmptyStackException("Stack is empty");
+        }
         return stack.remove(0);
     }
     @Override
